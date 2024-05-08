@@ -57,9 +57,9 @@ function playRound(playerSelection, computerSelection) {
 //     }
 // }
 
-const menu = document.querySelector("#menu");
-const output = document.querySelector("#output");
-const scoreboard = document.querySelector("#scoreboard");
+const menu = document.querySelector(".menu");
+const output = document.querySelector(".output");
+const scoreboard = document.querySelector(".scoreboard");
 
 let playerScore = 0;
 let compScore = 0;
@@ -74,19 +74,27 @@ menu.addEventListener("click", (event) => {
 
     output.textContent = gameValues.result;
     if (gameValues.playerScore == 1) {
+        output.style.color = "green";
         playerScore++;
         updateScore();
     }
     if (gameValues.compScore == 1) {
+        output.style.color = "red";
         compScore++;
         updateScore();
     }
 
+    if (output.textContent == "draw") {
+        output.style.color = "black";
+    }
+
     if (playerScore == 5) {
-        alert("Game is finish. You Win!!!")
+        alert("Game is finish. You Win!!!");
+        location.reload();
     }
     if (compScore == 5) {
         alert("Game is finish. You lose!!!");
+        location.reload();
     }
 });
 

@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS: RPS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors Game</h1>
-    <!-- <p>Open browser console to play</p> -->
-    <div id="menu">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+    <div class="header">
+        Rock Paper Scissors Game
     </div>
-    <div id="output"></div>
-    <div id="scoreboard"></div>
+    <div class="menu">
+        <!-- <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button> -->
+        <div class="info">
+            <img id="rock" src="images/rock.png" alt="rock">
+            <div class="text">ROCK</div>
+        </div>
+        <div class="info">
+            <img id="paper" src="images/paper.png" alt="paper">
+            <div class="text">PAPER</div>
+        </div>
+        <div class="info">
+            <img id="scissors" src="images/scissors.png" alt="scissors">
+            <div class="text">SCISSORS</div>
+        </div>
+    </div>
+    <div class="output"></div>
+    <div class="scoreboard"></div>
 
     <script src="script.js"></script>
 </body>
